@@ -1,0 +1,66 @@
+env: dev 
+
+
+grpc:
+  port: ${GRPC_PORT}
+  host: ${GRPC_HOST}
+
+database:
+  user: ${DB_USER}
+  password: ${DB_PASS}
+  host: ${DB_HOST}
+  port: ${DB_PORT}
+  name: ${DB_NAME}
+
+
+
+
+log:
+  log_metrics: true
+
+
+
+mfa:
+  user: ${MFA_USER}
+  password: ${MFA_PASS}
+  host: ${MFA_HOST}
+  port: ${MFA_PORT}
+
+
+
+server:
+  public:
+    cors:
+      allow_origins:
+        - http://localhost:63342
+        - http://localhost:8888
+        - http://localhost:8000
+
+session:
+  lifespan: 12h
+  enable_auth_token_header: false
+
+
+
+third_party:
+  providers:
+    apple:
+      enabled: false
+    discord:
+      enabled: true
+    github:
+      enabled: true
+    google:
+      enabled: true
+    linkedin:
+      enabled: false
+    microsoft:
+      enabled: false
+
+
+
+smtp:
+    port: "465"
+    host: smtp.example.com
+    user: example
+    password: example
